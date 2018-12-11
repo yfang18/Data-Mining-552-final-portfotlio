@@ -292,18 +292,8 @@ as(prediction, 'data.frame') %>%
   datatable(class="nowrap hover row-border", escape = FALSE, options = list(dom = 't',scrollX = FALSE, autoWidth = FALSE))  
 ```
 
-```
-## Warning: package 'bindrcpp' was built under R version 3.4.4
-```
 
-```
-## Warning in instance$preRenderHook(instance): It seems your data is too
-## big for client-side DataTables. You may consider server-side processing:
-## https://rstudio.github.io/DT/server.html
-```
-
-<!--html_preserve--><div id="htmlwidget-26c4d034cb9d8f8da835" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-26c4d034cb9d8f8da835">{"x":{"filter":"none","data":[["1","2","3","4","5"],["18","18","18","18","18"],[3.55326968483729,3.55326968483729,3.55326968483729,3.5129188076443,3.5129188076443],[527,2959,55820,1,110],["Trinità e Sartana figli di…","La voglia matta",null,"Lock, Stock and Two Smoking Barrels","The Three Musketeers"]],"container":"<table class=\"nowrap hover row-border\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>user<\/th>\n      <th>rating<\/th>\n      <th>movieId<\/th>\n      <th>original_title<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","scrollX":false,"autoWidth":false,"columnDefs":[{"className":"dt-right","targets":[2,3]},{"orderable":false,"targets":0}],"order":[],"orderClasses":false}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
+![](The_movies_recommender_3_files/figure-html/aaaaa.png)<!-- -->
 
 
 
