@@ -175,7 +175,7 @@ as(prediction, 'data.frame') %>%
   mutate(movieId = as.numeric(as.character(item))) %>% 
   left_join(select(movies, movieId, original_title), by = "movieId") %>% 
   select(-item) %>% 
-  datatable(class="nowrap hover row-border", escape = FALSE, options = list(dom = 't',scrollX = FALSE, autoWidth = FALSE))  
+  datatable(escape = FALSE, options = list(dom = 't',scrollX = FALSE, autoWidth = FALSE))  
 ```
 
 
