@@ -37,8 +37,7 @@ head(happydata,2)
 
 All variables are numeric besides the "Country" column, and there is no missing value in the dataset. 
 
-By looking into histograms of all variables besides "Country" and "Happiness.Rank", it is clear that most variables follow the normal distribution, without the significant outli
-er.
+By looking into histograms of all variables besides "Country" and "Happiness.Rank", it is clear that most variables follow the normal distribution, without the significant outlier.
 
 
 ```r
