@@ -72,143 +72,29 @@ Collaborative filtering is a standard method for product recommendations. For co
 library(recommenderlab)
 ```
 
-```
-## Warning: package 'recommenderlab' was built under R version 3.4.4
-```
-
-```
-## Loading required package: Matrix
-```
-
-```
-## Loading required package: arules
-```
-
-```
-## Warning: package 'arules' was built under R version 3.4.4
-```
-
-```
-## 
-## Attaching package: 'arules'
-```
-
-```
-## The following objects are masked from 'package:base':
-## 
-##     abbreviate, write
-```
-
-```
-## Loading required package: proxy
-```
-
-```
-## Warning: package 'proxy' was built under R version 3.4.4
-```
-
-```
-## 
-## Attaching package: 'proxy'
-```
-
-```
-## The following object is masked from 'package:Matrix':
-## 
-##     as.matrix
-```
-
-```
-## The following objects are masked from 'package:stats':
-## 
-##     as.dist, dist
-```
-
-```
-## The following object is masked from 'package:base':
-## 
-##     as.matrix
-```
-
-```
-## Loading required package: registry
-```
-
-```
-## Warning: package 'registry' was built under R version 3.4.3
-```
 
 ```r
 library(data.table)
 ```
 
-```
-## Warning: package 'data.table' was built under R version 3.4.4
-```
 
 ```r
 library(dplyr)
 ```
 
-```
-## Warning: package 'dplyr' was built under R version 3.4.4
-```
 
-```
-## 
-## Attaching package: 'dplyr'
-```
-
-```
-## The following objects are masked from 'package:data.table':
-## 
-##     between, first, last
-```
-
-```
-## The following objects are masked from 'package:arules':
-## 
-##     intersect, recode, setdiff, setequal, union
-```
-
-```
-## The following objects are masked from 'package:stats':
-## 
-##     filter, lag
-```
-
-```
-## The following objects are masked from 'package:base':
-## 
-##     intersect, setdiff, setequal, union
-```
 
 ```r
 library(tidyr)
 ```
 
-```
-## Warning: package 'tidyr' was built under R version 3.4.4
-```
 
-```
-## 
-## Attaching package: 'tidyr'
-```
-
-```
-## The following object is masked from 'package:Matrix':
-## 
-##     expand
-```
 
 ```r
 library(DT)
 ```
 
-```
-## Warning: package 'DT' was built under R version 3.4.4
-```
+
 
 ```r
 library(knitr)

@@ -78,24 +78,7 @@ Before using the package "arules", we need to convert the dataset into transacti
 library("arules")
 ```
 
-```
-## Warning: package 'arules' was built under R version 3.4.4
-```
 
-```
-## Loading required package: Matrix
-```
-
-```
-## 
-## Attaching package: 'arules'
-```
-
-```
-## The following objects are masked from 'package:base':
-## 
-##     abbreviate, write
-```
 
 ```r
 forrule<- suicide   # the dataset we will use to apply association rule analysis
@@ -172,17 +155,12 @@ To dig deeper into the countries, we find the countries with high suicide rate a
 library("maps")
 ```
 
-```
-## Warning: package 'maps' was built under R version 3.4.4
-```
 
 ```r
 library("ggplot2")
 ```
 
-```
-## Warning: package 'ggplot2' was built under R version 3.4.4
-```
+
 
 ```r
 country<- as.character(unique(suicide$country))

@@ -167,17 +167,11 @@ Features of unhappy counties(cluster 1): It is opposite to features of happy cou
 library(ggplot2)
 ```
 
-```
-## Warning: package 'ggplot2' was built under R version 3.4.4
-```
 
 ```r
 library(maps)
 ```
 
-```
-## Warning: package 'maps' was built under R version 3.4.4
-```
 
 ```r
 unhappy<- happydata[which(happydata$cluster==1),1]
