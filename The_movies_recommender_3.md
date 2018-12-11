@@ -289,7 +289,7 @@ as(prediction, 'data.frame') %>%
   mutate(movieId = as.numeric(as.character(item))) %>% 
   left_join(select(movies, movieId, original_title), by = "movieId") %>% 
   select(-item) %>% 
-  datatable(class="nowrap hover row-border", escape = FALSE, options = list(dom = 't',scrollX = TRUE, autoWidth = FALSE))  
+  datatable(class="nowrap hover row-border", escape = FALSE, options = list(dom = 't',scrollX = FALSE, autoWidth = FALSE))  
 ```
 
 ```
@@ -302,8 +302,11 @@ as(prediction, 'data.frame') %>%
 ## https://rstudio.github.io/DT/server.html
 ```
 
-<!--html_preserve--><div id="htmlwidget-c29fe721f2daf11bdf98" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-c29fe721f2daf11bdf98">{"x":{"filter":"none","data":[["1","2","3","4","5"],["18","18","18","18","18"],[3.55326968483729,3.55326968483729,3.55326968483729,3.5129188076443,3.5129188076443],[527,2959,55820,1,110],["Trinità e Sartana figli di…","La voglia matta",null,"Lock, Stock and Two Smoking Barrels","The Three Musketeers"]],"container":"<table class=\"nowrap hover row-border\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>user<\/th>\n      <th>rating<\/th>\n      <th>movieId<\/th>\n      <th>original_title<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","scrollX":true,"autoWidth":false,"columnDefs":[{"className":"dt-right","targets":[2,3]},{"orderable":false,"targets":0}],"order":[],"orderClasses":false}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
+<!--html_preserve--><div id="htmlwidget-26c4d034cb9d8f8da835" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-26c4d034cb9d8f8da835">{"x":{"filter":"none","data":[["1","2","3","4","5"],["18","18","18","18","18"],[3.55326968483729,3.55326968483729,3.55326968483729,3.5129188076443,3.5129188076443],[527,2959,55820,1,110],["Trinità e Sartana figli di…","La voglia matta",null,"Lock, Stock and Two Smoking Barrels","The Three Musketeers"]],"container":"<table class=\"nowrap hover row-border\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>user<\/th>\n      <th>rating<\/th>\n      <th>movieId<\/th>\n      <th>original_title<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","scrollX":false,"autoWidth":false,"columnDefs":[{"className":"dt-right","targets":[2,3]},{"orderable":false,"targets":0}],"order":[],"orderClasses":false}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
+
+
+
 
 From table above, we can see the recommendations for "Yuan", they are movies 527, 2959, 55820, 1 and 110.
 
@@ -328,59 +331,59 @@ results <- evaluate(scheme, algorithms, type = "ratings")
 ```
 ## RANDOM run fold/sample [model time/prediction time]
 ## 	 1  [0.001sec/0.05sec] 
-## 	 2  [0.018sec/0.04sec] 
+## 	 2  [0.018sec/0.042sec] 
 ## 	 3  [0.001sec/0.062sec] 
-## 	 4  [0.001sec/0.042sec] 
-## 	 5  [0.001sec/0.062sec] 
-## 	 6  [0sec/0.041sec] 
-## 	 7  [0.001sec/0.044sec] 
-## 	 8  [0.001sec/0.042sec] 
-## 	 9  [0.001sec/0.042sec] 
-## 	 10  [0.001sec/0.062sec] 
+## 	 4  [0.001sec/0.043sec] 
+## 	 5  [0.001sec/0.063sec] 
+## 	 6  [0.001sec/0.043sec] 
+## 	 7  [0.001sec/0.045sec] 
+## 	 8  [0.001sec/0.046sec] 
+## 	 9  [0.001sec/0.043sec] 
+## 	 10  [0.001sec/0.061sec] 
 ## UBCF run fold/sample [model time/prediction time]
-## 	 1  [0.024sec/0.203sec] 
-## 	 2  [0.003sec/0.258sec] 
-## 	 3  [0.003sec/0.177sec] 
-## 	 4  [0.003sec/0.18sec] 
-## 	 5  [0.003sec/0.2sec] 
-## 	 6  [0.003sec/0.179sec] 
-## 	 7  [0.003sec/0.181sec] 
-## 	 8  [0.003sec/0.18sec] 
-## 	 9  [0.003sec/0.182sec] 
+## 	 1  [0.024sec/0.21sec] 
+## 	 2  [0.003sec/0.255sec] 
+## 	 3  [0.003sec/0.174sec] 
+## 	 4  [0.003sec/0.198sec] 
+## 	 5  [0.004sec/0.176sec] 
+## 	 6  [0.004sec/0.179sec] 
+## 	 7  [0.003sec/0.183sec] 
+## 	 8  [0.003sec/0.176sec] 
+## 	 9  [0.003sec/0.178sec] 
 ## 	 10  [0.003sec/0.177sec] 
 ## UBCF run fold/sample [model time/prediction time]
-## 	 1  [0.003sec/0.408sec] 
-## 	 2  [0.003sec/0.149sec] 
-## 	 3  [0.005sec/0.152sec] 
-## 	 4  [0.003sec/0.181sec] 
-## 	 5  [0.003sec/0.154sec] 
-## 	 6  [0.003sec/0.183sec] 
-## 	 7  [0.003sec/0.161sec] 
-## 	 8  [0.005sec/0.148sec] 
-## 	 9  [0.006sec/0.188sec] 
-## 	 10  [0.003sec/0.148sec] 
+## 	 1  [0.003sec/0.405sec] 
+## 	 2  [0.006sec/0.151sec] 
+## 	 3  [0.003sec/0.151sec] 
+## 	 4  [0.003sec/0.157sec] 
+## 	 5  [0.002sec/0.151sec] 
+## 	 6  [0.003sec/0.179sec] 
+## 	 7  [0.004sec/0.153sec] 
+## 	 8  [0.004sec/0.153sec] 
+## 	 9  [0.003sec/0.182sec] 
+## 	 10  [0.003sec/0.158sec] 
 ## UBCF run fold/sample [model time/prediction time]
-## 	 1  [0.005sec/0.152sec] 
-## 	 2  [0.003sec/0.148sec] 
-## 	 3  [0.004sec/0.146sec] 
-## 	 4  [0.003sec/0.19sec] 
-## 	 5  [0.003sec/0.153sec] 
-## 	 6  [0.002sec/0.154sec] 
-## 	 7  [0.003sec/0.184sec] 
-## 	 8  [0.003sec/0.146sec] 
-## 	 9  [0.003sec/0.149sec] 
-## 	 10  [0.004sec/0.181sec] 
+## 	 1  [0.003sec/0.189sec] 
+## 	 2  [0.003sec/0.146sec] 
+## 	 3  [0.003sec/0.145sec] 
+## 	 4  [0.003sec/0.187sec] 
+## 	 5  [0.003sec/0.145sec] 
+## 	 6  [0.003sec/0.159sec] 
+## 	 7  [0.002sec/0.166sec] 
+## 	 8  [0.004sec/0.162sec] 
+## 	 9  [0.003sec/0.182sec] 
+## 	 10  [0.003sec/0.158sec] 
 ## UBCF run fold/sample [model time/prediction time]
-## 	 1  [0.003sec/0.144sec] 
-## 	 2  [0.004sec/0.179sec] 
-## 	 3  [0.003sec/0.149sec] 
-## 	 4  [0.003sec/0.152sec] 
-## 	 5  [0.006sec/0.171sec] 
-## 	 6  [0.003sec/0.151sec] 
-## 	 7  [0.003sec/0.178sec] 
-## 	 8  [0.003sec/0.149sec] 
-## 	 9  [0.003sec/0.173sec] 
-## 	 10  [0.003sec/0.145sec]
+## 	 1  [0.003sec/0.143sec] 
+## 	 2  [0.003sec/0.173sec] 
+## 	 3  [0.003sec/0.143sec] 
+## 	 4  [0.003sec/0.169sec] 
+## 	 5  [0.003sec/0.14sec] 
+## 	 6  [0.002sec/0.143sec] 
+## 	 7  [0.003sec/0.145sec] 
+## 	 8  [0.003sec/0.147sec] 
+## 	 9  [0.003sec/0.176sec] 
+## 	 10  [0.002sec/0.15sec]
 ```
 
 ```r
