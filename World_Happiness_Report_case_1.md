@@ -11,7 +11,8 @@ In this case, we will manipulate clustering analysis on World Happiness Report 2
 
 This dataset contains happiness rank and scores by country, 2017. The happiness scores is a metric measured in 2017 by asking the sampled people the question: "How would you rate your happiness on a scale of 0 to 10 where 10 is the happiest"
 
-##1. Read in data
+## 1. Read in data
+
 First, we need to read data into work environment. 
 
 
@@ -32,7 +33,7 @@ head(happydata,2)
 ## 2  0.3552805                     0.4007701          2.313707
 ```
 
-##2. Exploratory Data Analysis
+## 2. Exploratory Data Analysis
 
 All variables are numeric besides the "Country" column, and there is no missing value in the dataset. 
 
@@ -78,13 +79,13 @@ hist(happydata$Happiness.Score,col= "red");hist(happydata$Whisker.high, col = "r
 ![](World_Happiness_Report_files/figure-html/unnamed-chunk-2-1.png)<!-- -->![](World_Happiness_Report_files/figure-html/unnamed-chunk-2-2.png)<!-- -->![](World_Happiness_Report_files/figure-html/unnamed-chunk-2-3.png)<!-- -->
 
 
-##3. Discussion of the chosen clustering method
+## 3. Discussion of the chosen clustering method
 
 By applying clustering analysis to this dataset, we will find countries in the same group will be similiar (or related) to one another and different from (or unrelated to) the countries in other groups. In this way, we can reduce the size of large data sets and focus on the signals rather than noise.
 
 For this case, I will use K-means clustering method. For hierarchical clustering and DBScan, they are resistent to noise and outliers, but this data does not have noticeable noise or outlier, also DBScan is not suitable for high-dimentional data. So K-means is a better method for this case, not only because nearly every variable follows normal distribution, but also all variables have same densities.
 
-##4. K-means clustering & results
+## 4. K-means clustering & results
 
 Before applying K-means clustering analysis, we need to normalize the dataset. Because all the variables are not in the same range, if we don't normalize the dataset first, the distance would be wrongly calculated, and the variable with the largest scale will dominate the cluster result.
 
@@ -160,7 +161,7 @@ Features of happy countries(cluster 2): GDP per Capita, Family, Healthy Life Exp
 
 Features of unhappy counties(cluster 1): It is opposite to features of happy countries(cluster 2).
 
-##5. Interesting insights
+## 5. Interesting insights
 
 
 ```r

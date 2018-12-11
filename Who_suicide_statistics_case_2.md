@@ -12,14 +12,14 @@ In this case, we will apply association rule to a dataset containing the "suicid
 
 The dataset is the basic historical (1979-2016) data by country, year and demographic groups. Number of suicides and population are measured in people, so 1 simply means one person, not one thousand etc. (Data comes from https://www.kaggle.com/szamil/who-suicide-statistics)
 
-##1. Read in data
+## 1. Read in data
 
 
 ```r
 suicide<- read.csv("who_suicide_statistics.csv")
 ```
 
-##2. Data pre-processing
+## 2. Data pre-processing
 
 First we need to remove 7716 missing values. 
 
@@ -69,7 +69,7 @@ suicide$rank<- ifelse(suicide$percentage<= 0.00025,1,suicide$rank)
 ```
 
 
-##3. Association rule analysis
+## 3. Association rule analysis
 
 Before using the package "arules", we need to convert the dataset into transactions format. Once we get all rules, redundant rules need to be removed.
 
@@ -163,7 +163,7 @@ From rules we found above, for 75+ years old male living in Hungary and Slovenia
 For 75+ years old male living in Lithuania, Russian Federation and Uruguay, we are approximately 60% sure that they have the second highest suicide rate. The lifts are all about  40, it means {country=Lithuania,sex=male,age=75+ years}/{country=Russian Federation,sex=male,age=75+ years}/{country=Uruguay,sex=male,age=75+ years} and {rank=4} are dependent on each other, they are found together approximately 40 times more often than what would be expected by chance (i.e. if people suicide at random).
 
 
-##4. Futher insights
+## 4. Futher insights
 
 To dig deeper into the countries, we find the countries with high suicide rate are in Europe and Asia. Just like the map below, the color means the level of suicide rate. The darker the color, the higher the suicide rate.
 
